@@ -1,6 +1,5 @@
 import random
-
-from Random_Words import random_words
+from nltk.corpus import words
 
 def dashes(secret_word):
 
@@ -49,8 +48,9 @@ def guess(secret_word, word):
     return attemp
 
 def main():
-
-    secret_word = random_words.get(random.randint(1,len(random_words)),)
+    
+    rand = random.randint(0,len(words.words('en')))
+    secret_word = words.words()[rand]
     word = dashes(secret_word)
     attemp = guess(secret_word, word)
     if attemp > 0:
