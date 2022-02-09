@@ -1,6 +1,6 @@
 import random
 
-from Dictionary_Sample import random_words
+from Random_Words import random_words
 
 def dashes(secret_word):
 
